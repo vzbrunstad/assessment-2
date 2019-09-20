@@ -8,7 +8,7 @@
 ## Apple Orchards
 You are an entrepreneur in Indiana and want to create an apple picking orchard to create a family legacy. Part of your new venture involves understanding when to plant new apple trees and to remove apple trees coming up on their expiration.
 
-Let's build on everyone's favorite challenge: [Apple Trees!](https://github.com/indiaplatoon/apple-trees). Feel free to use my branch as a starting point.
+Let's build on everyone's favorite challenge: [Apple Trees!](https://github.com/julietplatoon/apple-trees). Feel free to use my branch as a starting point.
 
 ### Apple Orchard Implementation
 Implement the concept of an AppleOrchard:
