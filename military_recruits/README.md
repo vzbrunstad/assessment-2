@@ -4,7 +4,7 @@
 1. Reading / Writing to CSV
 2. Code Cleanliness
 
-**Note: You do not need to write Mamba tests for this**
+**Note: You do not need to write Unittest tests for this**
 
 ## Backstory
 You are a military recruiter in a major city and you would like to have a software program to manage new recruits. You do not know how to write data to a database so you decided to read and write to a CSV file.
