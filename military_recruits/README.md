@@ -13,7 +13,7 @@ You are a military recruiter in a major city and you would like to have a softwa
 Your OIC wants you to print out a list of all recruits. This is how they want it printed out:
 
 ```
-Recruit 1: Jon Smith, born 01/01/1990, Marine Corps. Jon finished College and is being paid at the O-1 pay grade. Their closest relative is named Tom Smith.
+Recruit 1: Jon Smith, born 01/01/1990, Marines. Jon finished College and is being paid at the O-1 pay grade. Their closest relative is named Tom Smith.
 ```
 
 ### Release 1
