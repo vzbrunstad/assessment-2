@@ -3,7 +3,7 @@
 ## Important Grading Information
 * TODO PUT RUBRIC HERE
 * This assessment is worth 15% of your final grade. You need to get a 75% or better to pass.
-* If you fail the assessment, you will have one week to retake it for a 10% penalty. We will not regrade passing assessments.
+* If you fail the assessment, you can retake it once within 2 weeks. If you retake it within 7 days, a 5% penalty will be enacted. If you retake it between 8-14 days, a 10% penalty will be enacted. We will not regrade passing assessments.
 
 ## Rules / Process
 * This test is fully open notes and open Google, but is not to be completed with other students
