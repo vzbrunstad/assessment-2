@@ -1,13 +1,19 @@
 # Assessment 2: Object Oriented Programming + CSV Reading/Writing
+- **Inventory Manager**
 
 ## Important Grading Information
-* TODO PUT RUBRIC HERE
-* This assessment is worth 15% of your final grade. You need to get a 75% or better to pass.
-* If you fail the assessment, you can retake it once within 2 weeks. If you retake it within 7 days, a 5% penalty will be enacted. If you retake it between 8-14 days, a 10% penalty will be enacted. We will not regrade passing assessments.
+- Make sure you read the [Assessment-2 Grading Rubric](https://docs.google.com/spreadsheets/d/1AlAQukmB3SS7IyW2hu0zY-9RaQnHY3lLeTi2O1fUb30/edit?usp=sharing).
+- This assessment is worth 15% of your final grade. You need to get a 75% or better to pass. (You must pass all assessments in order to graduate Code Platoon's program.)
+- If you fail the assessment, you have can retake it once to improve your score. For this assessment... 
+  - 5% penalty: If you complete and submit the retake **by 8:30am, July 12th, 2021** (end of the middle week break).
+  - 10% penalty: If you complete and submit the retake afterwards.
 
 ## Rules / Process
-* This test is fully open notes and open Google, but is not to be completed with other students
-* Do not open a pull request against this repository. We will evaluate your code individually with you.
+- This test is fully open notes and open Google, but is not to be completed with other students
+- Do not open a pull request against this repository. We will evaluate your code individually with you.
+
+## Requirements
+- This assessment should be completed using Python.
 
 ## Challenge
 We are going to be building video inventory software for the last Blockbuster in Bend, Oregon. We will create 2 classes and have them interact with each other via a runner file.
