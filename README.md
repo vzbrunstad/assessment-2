@@ -9,12 +9,12 @@
   - Testing (10%)
 - This assessment is worth 15% of your final grade. You need to get a 75% or better to pass. (You must pass all assessments in order to graduate Code Platoon's program.)
 - If you fail the assessment, you have can retake it once to improve your score. For this assessment... 
-  - 5% penalty: If you complete and submit the retake **by 8:30am, July 12th, 2021** (end of the middle week break).
-  - 10% penalty: If you complete and submit the retake afterwards.
+  - *5% penalty*: If you complete and submit the retake **within one week** of receiving your grade. 
+  - *10% penalty*: If you complete and submit the retake **by 8:30am, July 12th, 2021** (end of the middle week break). A retake for this assessment WILL NOT be accepted after this date.
 
 ## Rules / Process
 - This test is fully open notes and open Google, but is not to be completed with other students
-- Do not open a pull request against this repository. We will evaluate your code individually with you.
+- Push your solution up to your personal Github. Do not submit a pull request. 
 
 ## Requirements
 - This assessment should be completed using Python.
