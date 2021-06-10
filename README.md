@@ -20,43 +20,39 @@
 - This assessment should be completed using Python.
 
 ## Challenge
-*Back in the day*, humans would actually leave their homes to go rent a physical video copies of movies (what a strange concept, right?). Blockbuster was the leading video rental company in this era. Today, there is only one Blockbuster location left which is located in Bend, Oregon. Today, we are going to ask you to build a video inventory application for this Blockbuster!
+*Back in the day*, humans would actually leave their homes to go rent a physical video copy of movies (what a strange concept, right?). Blockbuster was the leading video rental company in this era. Today, there is only one Blockbuster location left which is located in Bend, Oregon. Today, we are going to ask you to build a video inventory application for this Blockbuster!
 
-Your Video Inventory Management application should be able to:
+Your Video Inventory Management application should manage the following data:
 - Manage customer information:
   - customer id
   - first name
   - last name
-  - current list of video rentals (by title)
+  - current list of video rentals (*by title*)
 - Manage the store's video inventory:
   - video id
   - video title
   - number of copies currently available
-- Allow a video rental to be rented out to a customer
-  - NOTE: Customer must be limited to a maximum of 3 rentals at a time. Your application should ensure no customer can exceed this limit.
-- Allow a video rental to be returned from a customer
-- Read application data from CSV files
-- Write application data out to CSV files
 
-Give careful consideration into what  data structures & data types (classes) you might need to use. Also, your application should always keep the CSV data files updated! We need data records to be backed up, in case our application were to crash (and lose data internally).
-
-Your application should have a menu interface that allows:
+Your application should allow:
 - Viewing the current video inventory for the store
-- Viewing a customer's current rented movies
-  - *by id*
-- Renting a movie to a customer
-  - *by title*
-- Returning a movie from a customer
-  - *by title*
+- Viewing a customer's current rented videos
+  - *by customer id*
+- Renting a video out to a customer
+  - *by video title*
+  - **IMPORTANT:** Customer should not allowed to have more than 3 videos rented at any given time. Your application should enforce this limitation!
+- Returning a video from a customer
+  - *by video title*
 - Adding a new customer
   - You should not have an initial list of video rentals assigned to a newly created customer
 - Exiting the application
 
+Be sure to give careful consideration into what data structures & data types (classes) you might need to use in your application logic. Also, your application should always keep the CSV data files updated! You need data records to be backed up in a file, in case your application were to crash (and lose data internally).
+
 Your menu should look something like this: 
 ```
 Welcome to Code Platoon Video!
-1. View entire video inventory
-2. View customer's rented movies
+1. View video inventory
+2. View customer's rented videos
 3. Rent video
 4. Return video
 5. Add new customer
