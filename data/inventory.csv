@@ -1,6 +1,11 @@
-titles,copies_available
-Guardians of the Galaxy,5
-Prometheus,2
-Split,12
-Sing,20
-La La Land,8
+id,title,copies_available
+1,Guardians of the Galaxy,5
+2,Prometheus,2
+3,Split,8
+4,Sing,10
+5,La La Land,5
+6,Rush Hour,3
+7,The Prestige,1
+8,The Dark Knight,5
+9,Inception,2
+10,Interstellar,0
