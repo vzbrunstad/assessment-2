@@ -18,6 +18,14 @@
 ## Challenge
 We are going to be building video inventory software for the last Blockbuster in Bend, Oregon. We will create 2 classes and have them interact with each other via a runner file.
 
-Create a `User` class that keeps track of a user's first name, last name, their current outstanding reservations, and their previous reservations. Users should be able to rent up to 3 titles at a time and be able to return them. Next, create a `InventoryManager` class that keeps track of titles at the store and how many copies of each title they have. `User`s should be able to borrow titles if available, otherwise they should be notified that it is out of stock. Both classes should have their data persisted through a CSV file.
+Create a `User` class that keeps track of a user's first name, last name, their current rented movies. Users should be able to rent up to 3 titles at a time and be able to return them. Next, create a `InventoryManager` class that keeps track of titles at the store and how many copies of each title they have. `User`s should be able to rent movies if available, otherwise they should be notified that it is out of stock. Both classes should have their data persisted through a CSV file.
 
-Finally, create a runner class that allows for a User to ask for the current inventory, see their current titles checked out, reserve a title, and return a title.
+Finally, create a runner class that allows for a User to ask for the current inventory, see their current movies checked out, rent a movie, and return a movie.
+
+```
+Welcome to Code Platoon Video!
+1. View a user's rented movies
+2. See available titles & quantity
+3. Rent a movie
+4. Return a movie
+```
