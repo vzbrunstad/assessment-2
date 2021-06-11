@@ -31,6 +31,7 @@ Your Video Inventory Management application should manage the following data:
 - Manage the store's video inventory:
   - video id
   - video title
+  - video rating
   - number of copies currently available in-store
 
 Your application should allow:
