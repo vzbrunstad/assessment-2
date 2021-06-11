@@ -65,7 +65,7 @@ class Interface():
 
                     
 
-    def add_customer(self):
+    def add_customer(self):# adds a customer by asking for user inputs, soring in customer_data, appending all_customers then saving to the csv file.
 
         customer_data = {'first_name': 'customer'}
 
@@ -84,7 +84,7 @@ class Interface():
         self.save_to_csv(all_customers)
 
 
-    def save_to_csv(self, all_customers):
+    def save_to_csv(self, all_customers):#can be called by other methods to save add_customers to the csv file.
         with open(customer_info_path, 'w') as csvfile:
             customer_csv = csv.writer(csvfile, delimiter=',')
             customer_csv.writerow(["id", "first_name", "last_name", "current_video_rentals"])
@@ -97,7 +97,7 @@ class Interface():
         self.all_Customers = Customers.all_customers()
         return self.main_menu()
 
-    def login(self):
+    def login(self):#called by existing users to identify who will be renting/returning videos.
         customer_id = input('Please enter your Customer ID Number: \n')
         for customer in Customers.all_customers():
             if customer.id == customer_id:
@@ -114,7 +114,7 @@ class Interface():
 
     
 
-    def view_invantory(self):
+    def view_invantory(self): #displays the current invantory of movies.
         all_invantory = Inventory.all_inventory()
         print("Blockbusters Current Invantory Includes")
         for movie in all_invantory:

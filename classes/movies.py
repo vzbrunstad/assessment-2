@@ -1,10 +1,10 @@
 import csv
 import os
 
-from classes.invantory import Invantory
+from classes.inventory import Inventory
 from classes.customers import Customers
 
-class Movies(Invantory): # Not sure if this shoudlbe Customers or Invantory as the parent
+class Movies(Inventory): # Not sure if this shoudlbe Customers or Invantory as the parent
     def __init__(self, id, title, rating, copies_available):
         super().__init__(id, title, rating, copies_available)
         self.checked_out = 'y'
