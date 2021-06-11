@@ -28,11 +28,11 @@ class Interface():
             """))
             print(user_input)
             if user_input == 1:
-                print('hello')
                 self.add_customer()
             elif user_input == 2:
                 self.login()
             elif user_input == 3:
+                print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThank you, Come again\n\n\n\n\n\n")
                 break
 
 
@@ -69,7 +69,7 @@ class Interface():
 
         customer_data = {'first_name': 'customer'}
 
-        customer_data['id'] = input('What would you like your id number to be: \n')
+        customer_data['id'] = input('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat would you like your id number to be: \n')
         customer_data['first_name'] = input('What is your first name: \n')
         customer_data["last_name"] = input('what is your last name: \n')
         customer_data['current_video_rentals'] = ''
@@ -85,43 +85,32 @@ class Interface():
 
 
     def save_to_csv(self, all_customers):
-        for customer in all_customers:
-                print(customer)
         with open(customer_info_path, 'w') as csvfile:
             customer_csv = csv.writer(csvfile, delimiter=',')
             customer_csv.writerow(["id", "first_name", "last_name", "current_video_rentals"])
-        
-            # customer_csv.writeheader()
             for customer in all_customers:
-                print(customer)
                 customer_csv.writerow([customer.id, customer.first_name, customer.last_name, customer.current_video_rentals])
 
-                # id=customer.id
-                # first_name=customer.first_name
-                # last_name=customer.last_name
-                # current_video_rentals = customer.current_video_rentals
-                # writer.writerow({'id': id,'first_name': first_name, 'last_name': last_name,'current_video_rentals': current_video_rentals})
-
-    # #     print(f"congradulations {user_data['name']} you have successfully created an account!")
         print(f"\n\n\n\nWelcome {customer.first_name}. You have been entered into our detabase(customers.csv)")
+        self.current_customer = customer
+        self.all_inventory =Inventory.all_inventory()
+        self.all_Customers = Customers.all_customers()
         return self.main_menu()
 
     def login(self):
         customer_id = input('Please enter your Customer ID Number: \n')
         for customer in Customers.all_customers():
-            # print (customer.id)
             if customer.id == customer_id:
                 self.current_customer = customer
                 self.all_inventory =Inventory.all_inventory()
-                # self.logged_in = True
-                self.all_inventory = Inventory.all_inventory()
+                self.all_Customers = Customers.all_customers()
                 if customer.first_name == 'Ankur':
                     print(f"\n\n\n\nWelcome {customer.first_name}, have a doughnut")
                 else:
                     print(f"\n\n\n\nWelcome {customer.first_name}")
                 return self.main_menu()
-    #     print(f"\n\nUser with drivers license number {drivers_license} not found.\n\nPlease try again.")        
-    #     self.login_menu
+        print(f"\n\nUser with drivers license number {customer_id} not found.\n\nPlease try again.")        
+        self.customer_checkin_menu
 
     
 
@@ -135,35 +124,46 @@ class Interface():
         Customers.all_customers()
         print(f"""
         
-        Customer ID: {self.current_customer.id}
-        Name: {self.current_customer.first_name} {self.current_customer.last_name} 
-        Movies Checked Out:{self.current_customer.current_video_rentals}
+        Customer ID:         {self.current_customer.id}
+        Name:                {self.current_customer.first_name} {self.current_customer.last_name} 
+        Movies Checked Out:  {self.current_customer.current_video_rentals}
         
         """)
 
     def rent_video(self):
-        print('Rent a Video')
+        all_invantory = Inventory.all_inventory()
+        all_customers= Customers.all_customers()
+        print("What movie would you like to rent?. Below is a list of available movies:\n")
+        for movie_title in all_invantory:
+            if movie_title.copies_available != 0:
+                print(movie_title.title)
+
+        rental = input("")
+        
+        with open(customer_info_path, 'w') as csvfile:
+            customer_csv = csv.writer(csvfile, delimiter=',')
+            customer_csv.writerow(["id", "first_name", "last_name", "current_video_rentals"])
+            for customer in all_customers:
+                if customer.id == self.current_customer.id:
+                    if self.current_customer.current_video_rentals == "":
+                        customer_csv.writerow([customer.id, customer.first_name, customer.last_name, self.current_customer.current_video_rentals+rental])
+                    else:
+                        customer_csv.writerow([customer.id, customer.first_name, customer.last_name, self.current_customer.current_video_rentals+"/"+rental])
+                else:
+                    customer_csv.writerow([customer.id, customer.first_name, customer.last_name,customer.current_video_rentals])
+
+        print(f"\n\n\n\nWelcome {customer.first_name}. You have been entered into our detabase(customers.csv)")
+        self.current_customer = customer
+        self.all_inventory =Inventory.all_inventory()
+        # self.logged_in = True
+        self.all_Customers = Customers.all_customers()
+        return self.main_menu()
+
 
     def return_video(self):
         print('Return a Video')
 
-    # def add_customer(self):
-    #     print('Add a Customer')
 
 
 
 
-
-
-        # with open(customer_info_path, 'w', newline='') as csv_file:
-        #     customer_csv = csv.DictWriter(csv_file, fieldnames = ["id", "first_name", "last_name", "current_video_rentals"])
-        #     customer_csv.writeheader()
-        #     for customer in all_customers:
-        #         print(customer)
-        #         customer_csv.writerow([customer.id, customer.first_name, customer.last_name, customer.current_video_rentals])
-
-        #         # id=customer.id
-        #         # first_name=customer.first_name
-        #         # last_name=customer.last_name
-        #         # current_video_rentals = customer.current_video_rentals
-        #         # writer.writerow({'id': id,'first_name': first_name, 'last_name': last_name,'current_video_rentals': current_video_rentals})
