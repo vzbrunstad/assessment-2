@@ -40,9 +40,10 @@ class Interface():
 
         while True:
                 user_input = int(input("""
-                
-                1. View Invantory
-                2. View Your Current Rentals
+
+                Welcome to Code Platoon Video!
+                1. View video inventory
+                2. View customer's rented videos
                 3. Rent Video
                 4. Return Video
                 5. Exit Application
@@ -131,7 +132,14 @@ class Interface():
             print(f"{movie.copies_available} copies of {movie.title} rated {movie.rating}")
     
     def view_my_rentals(self):
-        print('View My Rentals')
+        Customers.all_customers()
+        print(f"""
+        
+        Customer ID: {self.current_customer.id}
+        Name: {self.current_customer.first_name} {self.current_customer.last_name} 
+        Movies Checked Out:{self.current_customer.current_video_rentals}
+        
+        """)
 
     def rent_video(self):
         print('Rent a Video')

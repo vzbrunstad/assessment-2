@@ -19,7 +19,7 @@ class Inventory:
             inventory = csv.DictReader(inventory_file)
             inventory_list = []
             for movie in inventory:
-                print(movie)
+                # print(movie)
                 this_movie = Inventory(movie['id'], movie['title'], movie['rating'], movie['copies_available'])
                 inventory_list.append(this_movie)
  

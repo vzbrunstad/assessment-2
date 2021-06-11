@@ -20,7 +20,7 @@ class Customers:
             customers = csv.DictReader(customers_file)
             customers_list = []
             for customer in customers:
-                print(customer)
+                # print(customer)
                 this_customer = Customers(customer['id'], customer['first_name'], customer['last_name'], customer['current_video_rentals'])
                 customers_list.append(this_customer)
              
