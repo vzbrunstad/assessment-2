@@ -13,7 +13,7 @@
   - *10% penalty*: If you complete and submit the retake **by 8:30am, July 12th, 2021** (end of the middle week break). A retake for this assessment WILL NOT be accepted after this date.
 
 ## Rules / Process
-- This test is fully open notes and open Google, but is not to be completed with other students
+- This test is fully open notes and open Google, but is not to be completed with the help of other students/individuals.
 - Push your solution up to your personal Github. Do not submit a pull request. 
 
 ## Requirements
