@@ -36,12 +36,14 @@ Your Video Inventory Management application should manage the following data:
 Your application should allow:
 - Viewing the current video inventory for the store
 - Viewing a customer's current rented videos
-  - *by customer id*
+  - customer *by id*
 - Renting a video out to a customer
-  - *by video title*
-  - **IMPORTANT:** Customer should not allowed to have more than 3 videos rented at any given time. Your application should enforce this limitation!
+  - video *by title*
+  - customer *by id*
+  - **IMPORTANT:** Customers should not be allowed to have more than 3 videos rented at any given time. Your application should enforce this limitation!
 - Returning a video from a customer
-  - *by video title*
+  - video *by title*
+  - customer *by id*
 - Adding a new customer
   - You should not have an initial list of video rentals assigned to a newly created customer
 - Exiting the application
