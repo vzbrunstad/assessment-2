@@ -2,12 +2,11 @@ import csv
 import os.path
 
 my_path = os.path.abspath(os.path.dirname(__file__))
-customer_info_path = os.path.join(my_path, "../data/customers.csv")
+customer_info_path = os.path.join(my_path, "../data/customers.csv") #sets the file path to read the customers.csv file.
 
 
-class Customers:
-    # users = []
-    def __init__(self, id, first_name, last_name,current_video_rentals):
+class Customers: # declares the Customers Class.
+    def __init__(self, id, first_name, last_name,current_video_rentals): #Initiates the Customer Class
         self.id = id
         self.first_name = first_name
         self.last_name = last_name
@@ -15,12 +14,11 @@ class Customers:
 
 
     @classmethod
-    def all_customers(cls):
+    def all_customers(cls): #Reads the customers.csv file and returns the current customers.
         with open(customer_info_path, 'r') as customers_file:
             customers = csv.DictReader(customers_file)
             customers_list = []
             for customer in customers:
-                # print(customer)
                 this_customer = Customers(customer['id'], customer['first_name'], customer['last_name'], customer['current_video_rentals'])
                 customers_list.append(this_customer)
              

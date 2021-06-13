@@ -2,19 +2,18 @@ import csv
 import os.path
 
 my_path = os.path.abspath(os.path.dirname(__file__))
-inventory_info_path = os.path.join(my_path, "../data/inventory.csv")
+inventory_info_path = os.path.join(my_path, "../data/inventory.csv") # Sets the file path to the inventory.csv file.
 
 
-class Inventory:
-    # users = []
-    def __init__(self, id, title, rating, copies_available):
+class Inventory: # Declares the Inventory Class.
+    def __init__(self, id, title, rating, copies_available): # Initiates the Inventory Class.
         self.id = id
         self.title = title
         self.rating = rating
         self.copies_available = copies_available
 
     @classmethod
-    def all_inventory(cls):
+    def all_inventory(cls): # reads the inventory.csv when called.
         with open(inventory_info_path, 'r') as inventory_file:
             inventory = csv.DictReader(inventory_file)
             inventory_list = []
