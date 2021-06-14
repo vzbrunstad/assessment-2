@@ -17,3 +17,5 @@ class Movies(Inventory): # Declares the Movies class
         Copies Avaliable: {self.copies_available}
         Checked out: {self.checked_out}
         """
+
+#Final

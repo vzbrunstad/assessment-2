@@ -56,12 +56,16 @@ class Interface(): # Declare the Interface Class
             
                 if user_input == 1:
                     self.view_invantory()
+
                 elif user_input == 2:
                     self.view_my_rentals()
+
                 elif user_input == 3:
                     self.rent_video()
+
                 elif user_input == 4:
                     self.return_video()
+
                 elif user_input == 5:
                     self.logged_in_user = None
                     self.loggedIn = False
@@ -72,7 +76,7 @@ class Interface(): # Declare the Interface Class
 
         # User Inputs saves to the customer_data dict
         customer_data = {'first_name': 'customer'}
-        customer_data['id'] = input('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat would you like your id number to be: \n')
+        customer_data['id'] = input('\n\n\n\n\n\n\n\n\n\n\nWhat would you like your id number to be: \n')
         customer_data['first_name'] = input('What is your first name: \n')
         customer_data["last_name"] = input('what is your last name: \n')
         customer_data['current_video_rentals'] = ''
@@ -83,13 +87,19 @@ class Interface(): # Declare the Interface Class
         # checks for a user with the requested id and appends user inputs to the local all_customers list
         for customer in all_customers:
             if str(customer.id) == str(customer_data['id']):
-                print("A customer already exists with that id number. Try again.")
+                print("\n\n\n\nA customer already exists with that id number. Try again.")
                 return self.add_customer()
         all_customers.append(Customers(**dict(customer_data)))
+        
+
 
         print(f"\n\n\n\nWelcome {customer.first_name}. You have been entered into our detabase(customers.csv)")
         #calles the method to save the customers.csv
         self.save_customer_csv(all_customers)
+
+        for customer in Customers.all_customers():
+            if str(customer.id) == str(customer_data['id']):
+                self.current_customer = customer
         self.main_menu()
 
 
@@ -130,6 +140,7 @@ class Interface(): # Declare the Interface Class
         print("Blockbusters Current Invantory Includes")
         for movie in all_invantory:
             print(f"{movie.copies_available} copies of {movie.title} rated {movie.rating}")
+        return True
 
 
     #----------------------------------------   
@@ -142,6 +153,7 @@ class Interface(): # Declare the Interface Class
         Movies Checked Out:  {self.current_customer.current_video_rentals}
         
         """)
+        return True
 
 
     #----------------------------------------
@@ -173,7 +185,6 @@ class Interface(): # Declare the Interface Class
         self.save_invantory_csv(all_inventory)
 
         print (self.current_customer.first_name)
-        return self.main_menu()
 
 
     #----------------------------------------
@@ -210,9 +221,7 @@ class Interface(): # Declare the Interface Class
 
         print(f"\n\n\n\n{self.current_customer.first_name} Thank you for returning {returned}. Check out our new releases while your here")
 
-        
-        print (self.current_customer.first_name)
-        return self.main_menu()
+        return True
 
 
     #----------------------------------------
@@ -263,3 +272,4 @@ class Interface(): # Declare the Interface Class
 
 
         
+#Final
